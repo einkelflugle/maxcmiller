@@ -1,0 +1,19 @@
+// Colors
+$black: #262626;
+$white: #fff;
+$gray: #ccc;
+$dark-gray: #777;
+$purple: #5D0541;
+$light-purple: #72275B;
+$transparent-purple: rgba($purple, 0.7);
+$transparent-white: rgba($white, 0.4);
+
+// Mixins
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@mixin highlight-background {
+	background-color: $purple;
+	@include background-image(linear-gradient($light-purple, $purple));
+}

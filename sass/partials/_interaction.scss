@@ -1,0 +1,22 @@
+.button {
+	background-color: $purple;
+	padding: 10px 20px;
+	margin: 10px 0;
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	@include box-sizing(border-box);
+	@include border-radius(50px);
+	@include single-transition(0.2s, all, ease);
+	&:hover {
+		background-color: $light-purple;
+	}
+}
+.button-alt {
+	@extend .button;
+	background-color: white;
+	color: $purple;
+	&:hover {
+		background-color: $transparent-white;
+	}
+}

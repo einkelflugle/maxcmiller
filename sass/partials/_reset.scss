@@ -1,0 +1,9 @@
+* {
+	@include box-sizing(border-box);
+}
+body {
+	background-color: $black;
+}
+img {
+	display: block;
+}
