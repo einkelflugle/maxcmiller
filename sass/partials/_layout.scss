@@ -82,7 +82,7 @@ header {
 	background-color: $white;
 	.container {
 		text-align: center;
-		padding: 20px;
+		padding: 50px;
 		img {
 			margin: 20px auto;
 		}
@@ -122,20 +122,57 @@ header {
 	padding: 50px 0;
 	color: $white;
 	ul {
-		padding-top: 50px;
+		padding-top: 50px - $portfolio-item-padding;
 		li {
-			height: 300px;
 			width: 50%;
 			float: left;
+			position: relative;
+			padding: $portfolio-item-padding;
+			&.drawer {
+				width: 100%;
+				display: none;
+				background-color: $gray-black;
+				margin: $portfolio-item-padding;
+				position: relative;
+				h3 {
+					color: $gray;
+				}
+			}
 			a {
 				border-bottom: 0;
 				display: block;
-				height: 100%;
-				img {
-					height: 100%;
-					margin: auto;
-					padding: 20px 0;
+				margin: $portfolio-item-padding;
+				text-align: center;
+				@include fill-all;
+				&:hover {
+					background-color: rgba(0,0,0,0.5);
+					&:after {
+						opacity: 1;
+						@include transform(translateY(200px));
+					}
+					span {
+						opacity: 1;
+					}
 				}
+				&:after {
+					transform: translateY(400px);
+					opacity: 0;
+					content: 'More';
+					@extend .button;
+				}
+				span {
+					display: block;
+					position: absolute;
+					top: 50%;
+					width: 100%;
+					opacity: 0;
+					@include single-transition(0.2s, opacity, ease);
+					@include transform(translateY(-50%));
+				}
+			}
+			img {
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}

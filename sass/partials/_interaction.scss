@@ -5,6 +5,7 @@
 	display: inline-block;
 	cursor: pointer;
 	border: none;
+	text-shadow: 0 0 10px black;
 	@include box-sizing(border-box);
 	@include border-radius(50px);
 	@include single-transition(0.2s, all, ease);

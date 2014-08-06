@@ -1,12 +1,22 @@
 // Colors
 $black: #262626;
 $white: #fff;
+$gray-black: #333;
 $gray: #ccc;
 $dark-gray: #777;
 $purple: #5D0541;
 $light-purple: #72275B;
 $transparent-purple: rgba($purple, 0.7);
 $transparent-white: rgba($white, 0.4);
+
+// Z-indexes
+$one: 100;
+$two: 200;
+$three: 300;
+$four: 400;
+
+// Dimensions
+$portfolio-item-padding: 10px;
 
 // Mixins
 @mixin font-smoothing {
@@ -16,4 +26,11 @@ $transparent-white: rgba($white, 0.4);
 @mixin highlight-background {
 	background-color: $purple;
 	@include background-image(linear-gradient($light-purple, $purple));
+}
+@mixin fill-all {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
