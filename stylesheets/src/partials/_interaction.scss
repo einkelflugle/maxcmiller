@@ -17,6 +17,7 @@
 	@extend .button;
 	background-color: white;
 	color: $purple;
+	text-shadow: none;
 	&:hover {
 		background-color: $transparent-white;
 	}
