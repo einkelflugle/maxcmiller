@@ -32,15 +32,24 @@ module.exports = function(grunt) {
 
         watch: {
             html: {
-                files: ['index.html']
+                files: ['index.html'],
+                options: {
+                    livereload: true
+                }
             },
             css: {
                 files: ['stylesheets/src/screen.scss', 'stylesheets/src/partials/*.scss'],
-                tasks: ['compass']
+                tasks: ['compass'],
+                options: {
+                    livereload: true
+                }
             },
             javascript: {
                 files: ['javascripts/src', 'javascripts/libs'],
-                tasks: ['uglify']
+                tasks: ['uglify'],
+                options: {
+                    livereload: true
+                }
             }
         }
     });
