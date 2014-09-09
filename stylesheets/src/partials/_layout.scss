@@ -142,7 +142,7 @@ header {
 				margin: $portfolio-item-padding;
 				text-align: center;
 				@include fill-all;
-				&:hover {
+				&:hover, &:focus {
 					background-color: rgba(0,0,0,0.5);
 					&:after {
 						opacity: 1;
