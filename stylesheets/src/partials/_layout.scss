@@ -38,6 +38,8 @@ header {
 	nav {
 		float: right;
 		height: 80px;
+		background-color: $dark-black;
+		border-radius: 20px;
 		ul {
 			overflow: hidden;
 			height: 100%;
