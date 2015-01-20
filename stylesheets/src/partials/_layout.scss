@@ -20,6 +20,9 @@ header {
 	padding: 50px;
 	background-color: $black;
 	overflow: hidden;
+	@media (max-width: $bp-small) {
+		padding: 0;
+	}
 	.logo {
 		color: white;
 		border-bottom: 10px solid $purple;
@@ -34,18 +37,43 @@ header {
 		&:hover {
 			border-bottom: 10px solid $light-purple;
 		}
+		@media (max-width: $bp-small) {
+			text-align: center;
+			margin: auto;
+			padding: 10px 0 20px;
+			float: none;
+			border-bottom: 0;
+			&:hover {
+				border-bottom: 0;
+			}
+		}
 	}
 	nav {
 		float: right;
-		height: 80px;
 		background-color: $dark-black;
 		border-radius: 20px;
+		@media (max-width: $bp-small) {
+			background-color: $purple;
+			border-radius: 0;
+			width: 100%;
+		}
 		ul {
 			overflow: hidden;
 			height: 100%;
+			@media (max-width: $bp-small) {
+				display: flex;
+				width: 80%;
+				margin: auto;
+			}
+			@media (max-width: $bp-tiny) {
+				width: 100%;
+			}
 			li {
 				float: left;
 				height: 100%;
+				@media (max-width: $bp-small) {
+					flex: 1;
+				}
 				a {
 					box-sizing: content-box;
 					display: block;
@@ -55,8 +83,16 @@ header {
 					line-height: 30px;
 					font-size: 24px;
 					height: 30px;
+					text-align: center;
 					@include single-transition(all, 0.2s, ease);
 					&:hover, &:focus {
+						color: $white;
+					}
+					@media (max-width: $bp-tiny) {
+						font-size: 16px;
+						padding: 15px 10px;
+					}
+					@media (max-width: $bp-small) {
 						color: $white;
 					}
 				}
@@ -72,7 +108,19 @@ header {
 		margin: auto;
 		text-align: center;
 		padding: 25vh 0;
-		p {
+		@media (max-width: $bp-small) {
+			padding: 20vh 0;
+		}
+		@media (max-width: $bp-tiny) {
+			.hero-title {
+				color: $white;
+			}
+			.hero-text {
+				display: none;
+			}
+			padding: 10vh 0;
+		}
+		.hero-text {
 			color: $transparent-white;
 		}
 	}
@@ -85,6 +133,7 @@ header {
 		padding: 50px;
 		img {
 			margin: 20px auto;
+			max-width: 100%;
 			&.profile {
 				border-radius: 100%;
 			}
@@ -97,6 +146,9 @@ header {
 			display: flex;
 			@extend .container;
 			overflow: hidden;
+			@media (max-width: $bp-tiny) {
+				flex-direction: column;
+			}
 			li {
 				flex: 1;
 				position: relative;
@@ -110,11 +162,20 @@ header {
 					@include transform(scale(1.2));
 					color: $white;
 				}
+				@media (max-width: $bp-small) {
+					color: white;
+					&:hover {
+						@include transform(scale(1));
+					}
+				}
 				img {
 					max-height: 150px;
 					display: block;
 					margin: auto;
 					padding-top: 20px;
+					@media (max-width: $bp-small) {
+						max-height: 100px;
+					}
 				}
 			}
 		}
@@ -130,12 +191,21 @@ header {
 			float: left;
 			position: relative;
 			padding: $portfolio-item-padding;
+			@media (max-width: $bp-small) {
+				width: 100%;
+				margin: 0;
+			}
 			&.drawer {
 				width: 100%;
 				display: none;
 				background-color: $gray-black;
 				position: relative;
 				margin: $portfolio-item-padding 0;
+				box-shadow: 0 0 20px #222 inset;
+				@media (max-width: $bp-small) {
+					width: 100%;
+					padding: 20px;
+				}
 				.portfolio-description {
 					margin: auto;
 					max-width: 1000px;
@@ -153,6 +223,9 @@ header {
 				margin: $portfolio-item-padding;
 				text-align: center;
 				@include fill-all;
+				@media (max-width: $bp-small) {
+					background-color: rgba(0,0,0,0.5);
+				}
 				&:hover, &:focus {
 					background-color: rgba(0,0,0,0.5);
 					&:after {
@@ -168,6 +241,9 @@ header {
 					opacity: 0;
 					content: 'More';
 					@extend .button;
+					@media (max-width: $bp-small) {
+						display: none !important;
+					}
 				}
 				span {
 					display: block;
@@ -177,6 +253,9 @@ header {
 					opacity: 0;
 					@include single-transition(0.2s, opacity, ease);
 					@include transform(translateY(-50%));
+					@media (max-width: $bp-small) {
+						opacity: 1;
+					}
 				}
 			}
 			img {
@@ -206,10 +285,19 @@ footer {
 	padding: 20px 0;
 	.container {
 		display: flex;
+		@media (max-width: $bp-tiny) {
+			flex-direction: column;
+		}
 	}
 	.copyright {
 		flex: 3;
 		line-height: 75px;
+		@media (max-width: $bp-small) {
+			flex: 1;
+		}
+		@media (max-width: $bp-tiny) {
+			text-align: center;
+		}
 	}
 	.social-icons {
 		flex: 1;
