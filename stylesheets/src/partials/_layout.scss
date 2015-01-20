@@ -123,7 +123,6 @@ header {
 	padding: 50px 0;
 	color: $white;
 	ul {
-		padding-top: 50px - $portfolio-item-padding;
 		li {
 			width: 50%;
 			float: left;
@@ -133,10 +132,17 @@ header {
 				width: 100%;
 				display: none;
 				background-color: $gray-black;
-				margin: $portfolio-item-padding;
 				position: relative;
-				h3 {
-					color: $gray;
+				margin: $portfolio-item-padding 0;
+				.portfolio-description {
+					margin: auto;
+					max-width: 1000px;
+					.portfolio-item-title {
+						color: white;
+					}
+					.portfolio-item-category {
+						color: $gray;
+					}
 				}
 			}
 			a {
@@ -199,9 +205,9 @@ footer {
 	.container {
 		display: flex;
 	}
-	h4 {
+	.copyright {
 		flex: 3;
-		line-height: 60px;
+		line-height: 75px;
 	}
 	.social-icons {
 		flex: 1;
@@ -220,7 +226,7 @@ footer {
 				background-position-x: center;
 				@include single-transition(0.2s, all, ease);
 				&:hover {
-					@include transform(translateY(5px));
+					@include transform(translateY(2px));
 				}
 			}
 			&:first-child a {

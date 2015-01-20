@@ -5,6 +5,8 @@ $gray-black: #333;
 $gray: #ccc;
 $dark-gray: #777;
 $purple: #5D0541;
+$dark-purple: darken($purple, 5%);
+$darker-purple: darken($purple, 8%);
 $light-purple: #72275B;
 $transparent-purple: rgba($purple, 0.7);
 $transparent-white: rgba($white, 0.4);
@@ -17,6 +19,9 @@ $four: 400;
 
 // Dimensions
 $portfolio-item-padding: 10px;
+
+// Fonts
+$font-stack: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
 
 // Mixins
 @mixin font-smoothing {

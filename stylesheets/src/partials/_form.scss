@@ -10,6 +10,7 @@ input[type="text"] {
 	width: 500px;
 	border: 0;
 	background-color: $transparent-white;
+	max-width: 100%;
 	@include single-transition(0.5s, background-color, ease);
 	&:focus {
 		background-color: white;
@@ -17,6 +18,10 @@ input[type="text"] {
 	}
 }
 input[type="submit"] {
-	font-size: 16px;
 	@extend .button-alt;
+	font-family: $font-stack;
+	font-size: 16px;
+	&:active {
+		outline: none;
+	}
 }
