@@ -83,6 +83,9 @@ header {
 		padding: 50px;
 		img {
 			margin: 20px auto;
+			&.profile {
+				border-radius: 100%;
+			}
 		}
 	}
 	.feature-items {
