@@ -30,4 +30,7 @@ input[type="submit"] {
 	&:active {
 		outline: none;
 	}
+	@media (max-width: $bp-small) {
+		width: 100%;
+	}
 }
