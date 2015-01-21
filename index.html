@@ -103,44 +103,28 @@
 				<h2>Contact</h2>
 				<h3>Throw me a question</h3>
 
-				<?php
-				    $name = $_POST['name'];
-				    $email = $_POST['email'];
-				    $message = $_POST['message'];
+				<script type="text/javascript">var submitted=false;</script>
+				<iframe name="hidden_iframe" id="hidden_iframe"
+				style="display:none;" onload="if(submitted)
+				{displayFormMessage();}"></iframe>
 
-				    $from = 'From: maxcmiller'; 
-				    $to = 'maxcharlesmiller@gmail.com'; 
-				    $subject = 'Hello';
-					
-				    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-								
-				    if ($_POST['submit']) {
-				        if (mail ($to, $subject, $body, $from)) { 
-					    	echo '<p>Your message has been sent!</p>';
-						} else { 
-						    echo '<p>Woops! Try again.</p>'; 
-						} 
-				    }
-				?>
+				<form action="https://docs.google.com/forms/d/1m47CJvMfRk8V3pLDK4zTA4AHNDlDQ4yO7iyATYitsPc/formResponse" method="post"
+				target="hidden_iframe" onsubmit="submitted=true;">
+					<label for="entry_622405479">Your name</label>
+					<input type="text" name="entry.622405479" id="entry_622405479">
 
-				<form method="post" action="index.php">
-				    <div>
-				        <label for="name">Your name</label>
-				        <input type="text" name="name" id="name" />
-				    </div>
-				    <div>
-				        <label for="name">Your email</label>
-				        <input type="text" name="email" id="email" />
-				    </div>
-					
-					<div>
-						<label for="message">Your message</label>
-						<textarea rows="6" name="message" id="message"></textarea>
-					</div>
+					<label for="entry_1305839907">Your email</label>
+					<input type="text" name="entry.1305839907" id="entry_1305839907">
 
-					<div>
-					    <input type="submit" value="Submit" />
-				    </div>
+					<label class="ss-q-item-label" for="entry_1262031258">Your message</label>
+					<textarea name="entry.1262031258" rows="6" id="entry_1262031258"></textarea>
+
+					<input type="hidden" name="draftResponse" value="[,,&quot;4019279765599558549&quot;]
+					">
+					<input type="hidden" name="pageHistory" value="0">
+					<input type="hidden" name="fbzx" value="4019279765599558549">
+
+					<input type="submit" name="submit" value="Submit">
 				</form>
 			</div>
 		</section>

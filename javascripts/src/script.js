@@ -39,3 +39,7 @@ jQuery(document).ready(function($) {
 		}, 100);
 	});
 });
+
+function displayFormMessage() {
+	$('#contact .container').append("<p class='form-message'>Thanks for your input!</p>")
+}
