@@ -44,3 +44,19 @@ $font-stack: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
 	left: 0;
 	right: 0;
 }
+
+@mixin display-flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex; 
+}
+
+@mixin flex-($num) {
+	-webkit-box-flex: $num;
+	-moz-box-flex: $num;
+	-webkit-flex: $num;
+	-ms-flex: $num;
+	flex: $num;  
+}
