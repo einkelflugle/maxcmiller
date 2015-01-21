@@ -102,19 +102,40 @@
 			<div class="container">
 				<h2>Contact</h2>
 				<h3>Throw me a question</h3>
-				<form action="#" method="post">
+
+				<?php
+				    $name = $_POST['name'];
+				    $email = $_POST['email'];
+				    $message = $_POST['message'];
+
+				    $from = 'From: maxcmiller'; 
+				    $to = 'maxcharlesmiller@gmail.com'; 
+				    $subject = 'Hello';
+					
+				    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+								
+				    if ($_POST['submit']) {
+				        if (mail ($to, $subject, $body, $from)) { 
+					    	echo '<p>Your message has been sent!</p>';
+						} else { 
+						    echo '<p>Woops! Try again.</p>'; 
+						} 
+				    }
+				?>
+
+				<form method="post" action="index.php">
 				    <div>
 				        <label for="name">Your name</label>
-				        <input type="text" name="name" id="name" value="" />
+				        <input type="text" name="name" id="name" />
 				    </div>
 				    <div>
 				        <label for="name">Your email</label>
-				        <input type="text" name="email" id="email" value="" />
+				        <input type="text" name="email" id="email" />
 				    </div>
 					
 					<div>
-						<label for="textarea">Your message</label>
-						<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+						<label for="message">Your message</label>
+						<textarea rows="6" name="message" id="message"></textarea>
 					</div>
 
 					<div>
