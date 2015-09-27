@@ -1,0 +1,62 @@
+// Colors
+$black: #262626;
+$dark-black: #1f1f1f;
+$white: #fff;
+$gray-black: #333;
+$gray: #ccc;
+$dark-gray: #777;
+$purple: #5D0541;
+$dark-purple: darken($purple, 5%);
+$darker-purple: darken($purple, 8%);
+$light-purple: #72275B;
+$transparent-purple: rgba($purple, 0.7);
+$transparent-white: rgba($white, 0.4);
+
+// Z-indexes
+$one: 100;
+$two: 200;
+$three: 300;
+$four: 400;
+
+// Dimensions
+$portfolio-item-padding: 10px;
+
+// Media query breakpoints
+$bp-tiny: 450px;
+$bp-small: 800px;
+
+// Fonts
+$font-stack: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
+
+// Mixins
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@mixin highlight-background {
+	background-color: $purple;
+	@include background-image(linear-gradient($light-purple, $purple));
+}
+@mixin fill-all {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@mixin display-flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex; 
+}
+
+@mixin flex-($num) {
+	-webkit-box-flex: $num;
+	-moz-box-flex: $num;
+	-webkit-flex: $num;
+	-ms-flex: $num;
+	flex: $num;  
+}
